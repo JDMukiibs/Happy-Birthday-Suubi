@@ -1,12 +1,16 @@
 <nb-layout>
 
   <nb-layout-header fixed>
-  <!-- Insert header here -->
+    <nb-toggle status="info" (click)="turnOnLights()">Turn the Lights On!</nb-toggle>
   </nb-layout-header>
 
   <nb-layout-column>
-    <h1>Testing Something For The Wife</h1>
-    
+    <h1>Testing Lights</h1>
+
+    <div *ngIf="lightsAreOn">
+      <app-lights></app-lights>
+    </div>
+
   </nb-layout-column>
 
   <nb-layout-footer fixed>
