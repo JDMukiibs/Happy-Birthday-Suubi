@@ -9,7 +9,7 @@ import {NbThemeService} from '@nebular/theme';
   styleUrls: ['./lights.component.scss'],
   animations: [
     trigger('showBulbs', [
-      // ...
+      // Trigger will fade the bulbs into the application page.
 
     ])
   ]
