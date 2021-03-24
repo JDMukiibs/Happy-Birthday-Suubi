@@ -1,1 +1,22 @@
+.headerForPage, .icons {
+  font-size: x-large;
+}
 
+h1 {
+  font-family: 'Caveat', cursive;
+}
+
+.container {
+  height: 200px;
+  position: relative;
+}
+
+.container3 {
+  transform: rotateY(180deg);
+  position: relative;
+}
+
+.my_toggles {
+  margin: 0;
+  top: 50%;
+}

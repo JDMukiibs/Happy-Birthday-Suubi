@@ -1,17 +1,37 @@
 <nb-layout>
 
-  <nb-layout-header fixed>
-    <nb-toggle status="info" (click)="turnOnLights()">Turn the Lights On!</nb-toggle>
+  <nb-layout-header class="headerForPage">
+    <nb-icon icon="star" class="icons"></nb-icon><h1>Well would you look at that, It's Your Birthday!!</h1><nb-icon icon="star" class="icons"></nb-icon>
   </nb-layout-header>
 
+  <div *ngIf="lightsAreOn">
+    <app-lights></app-lights>
+  </div>
+
   <nb-layout-column>
-
-    <main>
-      <div *ngIf="lightsAreOn">
-        <app-lights></app-lights>
+      <div *ngIf="balloonsAreHung" class="container">
+        <app-balloons></app-balloons>
       </div>
-    </main>
+  </nb-layout-column>
 
+  <nb-layout-column>
+    <!--  Without the lights, we can't move forward so this is separate from the rest of the toggles that are in the container  -->
+    <div [@lightsOn]="lightsAreOn ? 'on' : 'off'" class="my_toggles">
+      <nb-toggle status="info" (click)="turnOnLights()">Turn The Lights On!</nb-toggle>
+    </div>
+
+    <!--  This container only appears if the lights come on  -->
+    <div *ngIf="lightsAreOn" class="container">
+      <div [@balloonsUp]="balloonsAreHung ? 'up' : 'down'">
+        <nb-toggle status="info" (click)="hangBalloons()">Place Balloons!</nb-toggle>
+      </div>
+    </div>
+  </nb-layout-column>
+
+  <nb-layout-column>
+    <div *ngIf="balloonsAreHung" class="container3">
+      <app-balloons></app-balloons>
+    </div>
   </nb-layout-column>
 
   <nb-layout-footer fixed>
