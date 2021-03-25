@@ -6,14 +6,23 @@ h1 {
   font-family: 'Caveat', cursive;
 }
 
-.container {
+.containerMid {
+  height: 450px;
+  position: relative;
+}
+
+.containerLeft {
   height: 200px;
   position: relative;
 }
 
-.container3 {
+.containerRight {
   transform: rotateY(180deg);
   position: relative;
+}
+
+.cakeContainer {
+  bottom: 5px;
 }
 
 .my_toggles {

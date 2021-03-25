@@ -8,12 +8,14 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
 import { BalloonsComponent } from './balloons/balloons.component';
 import { LightsComponent } from './lights/lights.component';
+import { CakeComponent } from './cake/cake.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BalloonsComponent,
-    LightsComponent
+    LightsComponent,
+    CakeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,13 @@
 <nb-layout>
 
   <nb-layout-header class="headerForPage">
-    <nb-icon icon="star" class="icons"></nb-icon><h1>Well would you look at that, It's Your Birthday!!</h1><nb-icon icon="star" class="icons"></nb-icon>
+    <div @fadeIn>
+      <h1>
+        <nb-icon icon="star" class="icons"></nb-icon>
+        Well would you look at that, It's Your Birthday!!
+        <nb-icon icon="star" class="icons"></nb-icon>
+      </h1>
+    </div>
   </nb-layout-header>
 
   <div *ngIf="lightsAreOn">
@@ -9,7 +15,7 @@
   </div>
 
   <nb-layout-column>
-      <div *ngIf="balloonsAreHung" class="container">
+      <div *ngIf="balloonsAreHung" class="containerLeft">
         <app-balloons></app-balloons>
       </div>
   </nb-layout-column>
@@ -17,19 +23,26 @@
   <nb-layout-column>
     <!--  Without the lights, we can't move forward so this is separate from the rest of the toggles that are in the container  -->
     <div [@lightsOn]="lightsAreOn ? 'on' : 'off'" class="my_toggles">
-      <nb-toggle status="info" (click)="turnOnLights()">Turn The Lights On!</nb-toggle>
+      <button nbButton outline status="info" (click)="turnOnLights()">Turn The Lights On!</button>
     </div>
-
     <!--  This container only appears if the lights come on  -->
-    <div *ngIf="lightsAreOn" class="container">
+    <div *ngIf="lightsAreOn" class="containerMid">
       <div [@balloonsUp]="balloonsAreHung ? 'up' : 'down'">
-        <nb-toggle status="info" (click)="hangBalloons()">Place Balloons!</nb-toggle>
+        <button nbButton outline status="info" (click)="hangBalloons()">Place Balloons!</button>
+      </div>
+      <div *ngIf="balloonsAreHung">
+        <button [@fadeInOut]="cakePlaced ? 'out' : 'in'" nbButton outline status="success" (click)="placeCake()">Place Cake</button>
+      </div>
+      <div *ngIf="balloonsAreHung" @fadeInOut class="cakeContainer">
+        <div *ngIf="cakePlaced" @fadeIn>
+          <app-cake></app-cake>
+        </div>
       </div>
     </div>
   </nb-layout-column>
 
   <nb-layout-column>
-    <div *ngIf="balloonsAreHung" class="container3">
+    <div *ngIf="balloonsAreHung" class="containerRight">
       <app-balloons></app-balloons>
     </div>
   </nb-layout-column>
