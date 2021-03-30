@@ -10,10 +10,74 @@
   left: 0;
   background-color: aqua;
 }
+.balloon2 {
+  --balloonDimension: 5vmax; // 5% of min(viewport width, height)
+  width: var(--balloonDimension);
+  height: var(--balloonDimension);
+  border-radius: 100% 100% 15% 100%;
+  margin: 0 0 0 25px;
+  transform: rotateZ(45deg);
+  position: center;
+  bottom: calc(1 * var(--balloonDimension));
+  left: 0;
+  background-color: #EBBD2E;
+}
 
-.balloon .string {
+.balloon3 {
+  --balloonDimension: 5vmax; // 5% of min(viewport width, height)
+  width: var(--balloonDimension);
+  height: var(--balloonDimension);
+  border-radius: 100% 100% 15% 100%;
+  margin: 0 0 0 25px;
+  transform: rotateZ(45deg);
+  position: center;
+  bottom: calc(1 * var(--balloonDimension));
+  left: 0;
+  background-color: #99B13D;
+}
+
+.balloon4 {
+  --balloonDimension: 5vmax; // 5% of min(viewport width, height)
+  width: var(--balloonDimension);
+  height: var(--balloonDimension);
+  border-radius: 100% 100% 15% 100%;
+  margin: 0 0 0 25px;
+  transform: rotateZ(45deg);
+  position: center;
+  bottom: calc(1 * var(--balloonDimension));
+  left: 0;
+  background-color: #D76239;
+}
+
+.balloon5 {
+  --balloonDimension: 5vmax; // 5% of min(viewport width, height)
+  width: var(--balloonDimension);
+  height: var(--balloonDimension);
+  border-radius: 100% 100% 15% 100%;
+  margin: 0 0 0 25px;
+  transform: rotateZ(45deg);
+  position: center;
+  bottom: calc(1 * var(--balloonDimension));
+  left: 0;
+  background-color: #FBF604;
+}
+
+.balloon6 {
+  --balloonDimension: 5vmax; // 5% of min(viewport width, height)
+  width: var(--balloonDimension);
+  height: var(--balloonDimension);
+  border-radius: 100% 100% 15% 100%;
+  margin: 0 0 0 25px;
+  transform: rotateZ(45deg);
+  position: center;
+  bottom: calc(1 * var(--balloonDimension));
+  left: 0;
+  background-color: #FC5D74;
+}
+
+.balloon .balloon2 .balloon3 .balloon4 .balloon5 .balloon6 .string {
   position: absolute;
-  background-color: maroon;
+  background-color: black;
   width: 1px;
   height: calc(var(--balloonDimension) * .4);
   transform-origin: top center;

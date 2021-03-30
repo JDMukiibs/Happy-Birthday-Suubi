@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { BalloonsComponent } from './balloons/balloons.component';
 import { LightsComponent } from './lights/lights.component';
 import { CakeComponent } from './cake/cake.component';
+import { ConfettiComponent } from './confetti/confetti.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BalloonsComponent,
     LightsComponent,
-    CakeComponent
+    CakeComponent,
+    ConfettiComponent
   ],
   imports: [
     BrowserModule,

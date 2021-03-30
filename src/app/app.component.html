@@ -21,22 +21,20 @@
   </nb-layout-column>
 
   <nb-layout-column>
-    <!--  Without the lights, we can't move forward so this is separate from the rest of the toggles that are in the container  -->
+    <!--  Without the lights, we can't move forward so this is separate from the rest of the buttons that are in the container  -->
     <div [@lightsOn]="lightsAreOn ? 'on' : 'off'" class="my_toggles">
       <button nbButton outline status="info" (click)="turnOnLights()">Turn The Lights On!</button>
     </div>
     <!--  This container only appears if the lights come on  -->
     <div *ngIf="lightsAreOn" class="containerMid">
+      <app-confetti *ngIf="cakePlaced" @fadeIn2></app-confetti>
       <div [@balloonsUp]="balloonsAreHung ? 'up' : 'down'">
         <button nbButton outline status="info" (click)="hangBalloons()">Place Balloons!</button>
       </div>
-      <div *ngIf="balloonsAreHung">
-        <button [@fadeInOut]="cakePlaced ? 'out' : 'in'" nbButton outline status="success" (click)="placeCake()">Place Cake</button>
-      </div>
-      <div *ngIf="balloonsAreHung" @fadeInOut class="cakeContainer">
-        <div *ngIf="cakePlaced" @fadeIn>
-          <app-cake></app-cake>
-        </div>
+
+      <div *ngIf="balloonsAreHung" @fadeIn class="cakeContainer">
+        <button [@fadeInOut]="cakePlaced ? 'out' : 'in'" nbButton outline status="info" (click)="placeCake()">Place Cake</button>
+        <app-cake *ngIf="cakePlaced" @fadeIn></app-cake>
       </div>
     </div>
   </nb-layout-column>

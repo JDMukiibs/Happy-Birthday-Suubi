@@ -10,17 +10,25 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     trigger('fadeIn', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate(2000)
+        animate(3000)
+      ])
+    ]),
+    trigger('fadeIn2', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('3s 2s ease-in')
       ])
     ]),
     trigger('fadeInOut', [
       state('out', style({ opacity: 0 })),
       state('in', style( { opacity: 1 })),
-      transition('* => in', [
-        animate('2s ease-in')
-      ]),
       transition('in => out', [
-        animate('2s ease-out')
+        animate(3000),
+        style({ opacity: 1 }),
+      ]),
+      transition('* => in', [
+        style({ opacity: 0 }),
+        animate(3000)
       ])
     ]),
     trigger('lightsOn', [
@@ -54,10 +62,12 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class AppComponent {
   title = 'Happy-Birthday-Suubi';
+  // Button variables
   lightsAreOn = false;
   balloonsAreHung = false;
   cakePlaced = false;
 
+  // Button functions
   turnOnLights() {
     this.lightsAreOn = !this.lightsAreOn;
   }
