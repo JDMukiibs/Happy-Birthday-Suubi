@@ -12,7 +12,7 @@ import {animate, query, stagger, state, style, transition, trigger} from '@angul
       transition('void => *', [
         query('div', [
           style({ transform: 'translateX(-100%)' }),
-          stagger(-30, [animate('4s ease-in'), style({transform: 'none' })])
+          stagger(-30, [animate('2s ease-in'), style({transform: 'none' })])
         ])
       ])
     ])
