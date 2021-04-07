@@ -1,6 +1,9 @@
 # HappyBirthdaySuubi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5. 
+
+## Please Note:
+Current version of this web-app not optimized yet for Mobile viewing but should work fine on a desktop. 
 
 ## Development server
 
