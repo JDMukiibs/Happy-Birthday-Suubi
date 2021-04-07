@@ -29,7 +29,7 @@ export class ConfettiComponent {
 
   // tslint:disable-next-line:typedef
   throwConfetti() {
-    this.confettiThrown = !this.confettiThrown;
+    this.confettiThrown = true;
     confetti.create(this.myCanvas, {resize: true})({
       shapes: ['square'],
       particleCount: Math.floor(this.count * 0.25),

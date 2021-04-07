@@ -1,2 +1,5 @@
 <button nbButton outline status="info" (click)="throwConfetti()">Don't Forget Confetti!</button>
-<canvas id="myCanvas" width="500" height="400"></canvas>
+<canvas id="myCanvas" width="500" height="340"></canvas>
+<div *ngIf="confettiThrown">
+  <p>Hello Su, Enjoy This Small Web-App I Made For You. Happy Birthday!<br>Confetti button is there forever so you can keep throwing confetti! :)</p>
+</div>
