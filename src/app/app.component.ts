@@ -28,7 +28,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       ]),
       transition('* => in', [
         style({ opacity: 0 }),
-        animate('3s 1s')
+        animate('3s 2s')
       ])
     ]),
     trigger('lightsOn', [
